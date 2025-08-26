@@ -1,0 +1,100 @@
+/* === Base Styles === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Navigation */
+nav ul {
+  display: flex; /* Flexbox */
+  justify-content: center;
+  list-style: none;
+  background: #444;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Grid Layout for Main */
+.grid-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr; /* Content + Sidebar */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Content */
+.content h2 {
+  margin-bottom: 1rem;
+}
+
+.card-container {
+  display: flex; /* Flexbox */
+  gap: 1rem;
+}
+
+.card {
+  flex: 1;
+  background: #f4f4f4;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Sidebar */
+.sidebar {
+  background: #eee;
+  padding: 1rem;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  /* Tablet view */
+  .grid-container {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .card-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Mobile view */
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr; /* Stack content + sidebar */
+  }
+}
